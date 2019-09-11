@@ -36,23 +36,25 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.ActionScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\resources\templates" />
+      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\java\com\zyl\springboot04" />
+      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
+      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\public" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\templates" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\java\com" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
-      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,7 +90,8 @@
       <updated>1567776982488</updated>
       <workItem from="1567776987422" duration="5814000" />
       <workItem from="1567915285162" duration="1861000" />
-      <workItem from="1568120543178" duration="5062000" />
+      <workItem from="1568120543178" duration="8501000" />
+      <workItem from="1568209158614" duration="6197000" />
     </task>
     <servers />
   </component>

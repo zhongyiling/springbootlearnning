@@ -14,7 +14,10 @@ public class HelloController {
     public String sayHello(){
         return "hello spring";
     }
-
+/*
+* 只要我们把HTML页面放在classpath:/templates/，thymeleaf就能自动渲染
+*  即，访问http://localhost:9090/success就可以访问http://localhost:9090/success页面
+* */
     @RequestMapping("/success")
 //    查出一些数据在页面展示
     public String success(Map<String,Object> map){
@@ -30,4 +33,12 @@ public class HelloController {
     public String test(){
         return "success";
     }
+
+    //@ResponseBody
+    //@RequestMapping({"/","/index.html"})
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
+
 }
