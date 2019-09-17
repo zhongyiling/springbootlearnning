@@ -40,7 +40,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.ActionScript" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -91,7 +91,7 @@
       <workItem from="1567776987422" duration="5814000" />
       <workItem from="1567915285162" duration="1861000" />
       <workItem from="1568120543178" duration="8501000" />
-      <workItem from="1568209158614" duration="6197000" />
+      <workItem from="1568209158614" duration="7163000" />
     </task>
     <servers />
   </component>
