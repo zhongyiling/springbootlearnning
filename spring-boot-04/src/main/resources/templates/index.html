@@ -14,12 +14,13 @@
 	</head>
 
 	<body class="text-center">
-		<form class="form-signin" action="dashboard.html">
+	<!--action：属性定义了当表单被提交时数据被送往何处-->
+		<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
 			<img class="mb-4" src="img/bootstrap-solid.svg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 			<label class="sr-only" th:text="#{login.username}">Username</label>
-			<input type="text" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
-			<label class="sr-only" th:text="#{login.password}">Password</label>
+			<input type="text" class="form-control" th:name="username" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
+			<label class="sr-only" th:name="password" th:text="#{login.password}">Password</label>
 			<input type="password" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
 			<div class="checkbox mb-3">
 				<label>
@@ -30,8 +31,8 @@
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Sign in</button>
 			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-			<a class="btn btn-sm">中文</a>
-			<a class="btn btn-sm">English</a>
+			<a class="btn btn-sm" th:href="@{/index.html(locale='zh_CN')}">中文</a>
+			<a class="btn btn-sm" th:href="@{/index.html(locale='en_US')}">English</a>
 		</form>
 
 	</body>

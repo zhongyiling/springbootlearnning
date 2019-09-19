@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BeansEndpointTabSettings">
+    <option name="showContexts" value="false" />
+    <option name="showDoc" value="false" />
+    <option name="showFiles" value="false" />
+    <option name="showLibraryBeans" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf13330-fe48-4707-8f18-0bb6d6fd1b1d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,18 +49,18 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\resources\templates" />
-      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\java\com\zyl\springboot04" />
-      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
-      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\public" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\templates" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
       <recent name="E:\workplace\IEAD\spring-boot-04\src\main\java\com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\resources\templates" />
+      <recent name="E:\workplace\IEAD\springbootlearnning\spring-boot-04\src\main\java\com\zyl\springboot04" />
+      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\resources" />
+      <recent name="E:\workplace\IEAD\spring-boot-04\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,6 +98,9 @@
       <workItem from="1567915285162" duration="1861000" />
       <workItem from="1568120543178" duration="8501000" />
       <workItem from="1568209158614" duration="7163000" />
+      <workItem from="1568722898502" duration="8262000" />
+      <workItem from="1568764991786" duration="7079000" />
+      <workItem from="1568897846542" duration="8545000" />
     </task>
     <servers />
   </component>
@@ -110,6 +119,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zyl/springboot04/component/MyLocalResolver.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/spring_boot_04$SpringBoot04Application.ic" NAME="SpringBoot04Application Coverage Results" MODIFIED="1568125302002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

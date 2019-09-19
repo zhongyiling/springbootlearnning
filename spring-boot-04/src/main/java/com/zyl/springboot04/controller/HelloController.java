@@ -34,11 +34,10 @@ public class HelloController {
         return "success";
     }
 
-    //@ResponseBody
-    //@RequestMapping({"/","/index.html"})
-    @RequestMapping("/")
+    // 与config\MyMvcConfig.java中的WebMvcConfigurerAdapter二选一即可
+/*    @RequestMapping({"/","/index.html"})
     public String index(){
         return "index";
-    }
+    }*/
 
 }

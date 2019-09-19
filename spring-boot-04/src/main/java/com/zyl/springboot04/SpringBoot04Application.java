@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ViewResolver;
 import java.util.Locale;
 
 @SpringBootApplication
+        // (scanBasePackages = "com.zyl.springboot04.*")
 public class SpringBoot04Application {
 
     public static void main(String[] args) {
