@@ -7,16 +7,16 @@
 		<meta name="author" content="">
 		<title>Signin Template for Bootstrap</title>
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="asserts/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
 		<!--<link href="css/signin.css" rel="stylesheet">可以将原来的href设置替换如下-->
-		<link th:href="@{/css/signin.css}" rel="stylesheet">
+		<link th:href="@{/static/asserts/css/signin.css}" rel="stylesheet">
 	</head>
 
 	<body class="text-center">
 	<!--action：属性定义了当表单被提交时数据被送往何处-->
 		<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
-			<img class="mb-4" src="img/bootstrap-solid.svg" alt="" width="72" height="72">
+			<img class="mb-4" src="../static/asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 			<label class="sr-only" th:text="#{login.username}">Username</label>
 			<input type="text" class="form-control" th:name="username" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">

@@ -6,10 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 // 使用WebMvcConfigurerAdapter来扩展springMVC的功能
 
 
@@ -30,7 +27,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
         // 浏览器发送 /zyl请求来到success页面
         registry.addViewController("/zyl").setViewName("success");
     }
-
     // 所有的WebMvcConfigurerAdapter组件都会一起起作用
     @Bean //将组件注册在容器中
     public WebMvcConfigurer webMvcConfigurer(){
@@ -38,7 +34,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
                 registry.addViewController("/").setViewName("login");
-                registry.addViewController("/index.html").setViewName("login");
+                registry.addViewController("/login.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("dashboard");
             }
             @Override
@@ -47,10 +43,11 @@ public class MyMvcConfig implements WebMvcConfigurer {
                 //SpringBoot已经做好了静态资源映射
                 // 到登录也页面的请求不可拦截
                 registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/index.html","/","/user/login");
+                        .excludePathPatterns("/login.html","/","/user/login","/asserts/**","/webjars/**");
             }
         };
         return webMvcConfigurer;
+
     }
 
 

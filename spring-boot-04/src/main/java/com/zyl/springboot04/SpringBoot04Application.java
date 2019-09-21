@@ -1,5 +1,6 @@
 package com.zyl.springboot04;
 
+import com.zyl.springboot04.component.LoginHandlerInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +27,11 @@ public class SpringBoot04Application {
         public View resolveViewName(String s, Locale locale) throws Exception {
             return null;
         }
+    }
+
+    @Bean
+    public LoginHandlerInterceptor loginHandlerInterceptor(){
+        return new LoginHandlerInterceptor();
     }
 }
 

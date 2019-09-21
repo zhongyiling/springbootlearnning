@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,10 +10,10 @@
 
 		<title>Dashboard Template for Bootstrap</title>
 		<!-- Bootstrap core CSS -->
-		<link href="asserts/css/bootstrap.min.css" rel="stylesheet">
+		<link href="asserts/css/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.css}" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="asserts/css/dashboard.css" rel="stylesheet">
+		<link href="asserts/css/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
 		<style type="text/css">
 			/* Chart.js */
 			
@@ -43,7 +43,8 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+	<!--删除nav标签中的值，改为引入dashboard中的公共topbar-->
+<!--		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
 			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">Company name</a>
 			<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 			<ul class="navbar-nav px-3">
@@ -51,11 +52,23 @@
 					<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">Sign out</a>
 				</li>
 			</ul>
-		</nav>
-
+		</nav>-->
+	<!---->
+		<div th:insert="~{dashboard::topbar}"></div>
+	<!--使用th:replace引入公共标签
+		<div th:replace="dashboard::topbar"></div>
+		使用th:replace引入公共标签
+		<div th:include="dashboard::topbar"></div>
+	-->
 		<div class="container-fluid">
 			<div class="row">
-				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+				<!--第二引入公共标签的方式，
+				声明公共标签：id="xxx"
+				引用方式：~{templatename::selector}：模板名::选择器
+
+				-->
+				<div th:replace="~{dashboard::#sidebar}"></div>
+				<!--<nav class="col-md-2 d-none d-md-block bg-light sidebar">
 					<div class="sidebar-sticky">
 						<ul class="nav flex-column">
 							<li class="nav-item">
@@ -176,7 +189,7 @@
 							</li>
 						</ul>
 					</div>
-				</nav>
+				</nav>-->
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<h2>Section title</h2>
@@ -314,18 +327,18 @@
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"></script>
-		<script type="text/javascript" src="asserts/js/popper.min.js"></script>
-		<script type="text/javascript" src="asserts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../static/asserts/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="../../static/asserts/js/popper.min.js"></script>
+		<script type="text/javascript" src="../../static/asserts/js/bootstrap.min.js"></script>
 
 		<!-- Icons -->
-		<script type="text/javascript" src="asserts/js/feather.min.js"></script>
+		<script type="text/javascript" src="../../static/asserts/js/feather.min.js"></script>
 		<script>
 			feather.replace()
 		</script>
 
 		<!-- Graphs -->
-		<script type="text/javascript" src="asserts/js/Chart.min.js"></script>
+		<script type="text/javascript" src="../../static/asserts/js/Chart.min.js"></script>
 		<script>
 			var ctx = document.getElementById("myChart");
 			var myChart = new Chart(ctx, {

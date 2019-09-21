@@ -9,10 +9,10 @@
 
 		<title>Dashboard Template for Bootstrap</title>
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.css}" rel="stylesheet" type="text/css">
 
 		<!-- Custom styles for this template -->
-		<link href="css/dashboard.css" rel="stylesheet">
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			/* Chart.js */
 			
@@ -42,7 +42,12 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <!--引入topbar,让其他网页公用-->
+    <!--第一种方式：
+    声明公共标签：th:fragment="xxx"
+    引用方法：~{templatename::fragmentname}:模板名::片段名
+    -->
+		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" th:fragment="topbar">
 			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">Company name</a>
 			<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 			<ul class="navbar-nav px-3">
@@ -54,11 +59,16 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <!--第二引入公共标签的方式，
+                声明公共标签：id="xxx"
+                引用方式：~{templatename::selector}：模板名::选择器
+
+                -->
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar"id="sidebar">
 					<div class="sidebar-sticky">
 						<ul class="nav flex-column">
 							<li class="nav-item">
-								<a class="nav-link active" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+								<a class="nav-link active" href="#" th:href="@{main.html}">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
 										<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 										<polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -86,7 +96,8 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+                                <!--th:href="@{/emps}":点击Customers，请求查询员工列表-->
+								<a class="nav-link" href="#" th:href="@{/emps}">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
 										<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
 										<circle cx="9" cy="7" r="4"></circle>
