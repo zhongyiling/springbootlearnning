@@ -89,6 +89,7 @@
                     <input name="birth" type="text" class="form-control" placeholder="" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
                 </div>
                 <button type="submit" class="btn btn-primary" th:text="${emp!=null}?'edit':'add'">add</button>
+                <a type="button" class="btn btn-light" th:href="@{/cancel}">cancel</a>
             </form>
         </main>
     </div>

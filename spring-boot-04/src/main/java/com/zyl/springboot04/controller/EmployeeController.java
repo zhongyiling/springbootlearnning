@@ -73,4 +73,9 @@ public class EmployeeController {
         employeeDao.delete(id);
         return "redirect:/emps";
     }
+
+    @GetMapping("/cancel")
+    public String cancelRequest(){
+        return "redirect:/emps";
+    }
 }
