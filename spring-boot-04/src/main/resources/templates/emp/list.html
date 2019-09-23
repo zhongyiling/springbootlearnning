@@ -72,21 +72,24 @@
 									<!--日期格式化${#dates.format(date, 'yyyy-MM-dd HH:mm')}-->
 									<td th:text="${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}"></td>
 									<td>
-										<button class="btn btn-sm btn-outline-primary">edit</button>
-										<button class="btn btn-sm btn-danger">delete</button>
+										<a class="btn btn-sm btn-outline-primary" th:href="@{'/emp/'+${emp.id}}">edit</a>
+										<button th:attr="del_uri=@{'/emp/'+${emp.id}}" class="btn btn-sm btn-danger deleteBtn">delete</button>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</main>
+				<form id="deleteEmpForm" method="post">
+					<input type="hidden" name="_method" value="delete"/>
+				</form>
 			</div>
 		</div>
 
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+		<script type="text/javascript" src="asserts/js/jquery-3.3.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
 		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.14.3/popper.js}"></script>
 		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.js}"></script>
 
@@ -94,6 +97,13 @@
 		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
 		<script>
 			feather.replace()
+		</script>
+		<script>
+			$(".deleteBtn").click(function (){
+				//删除当前员工的
+				$("#deleteEmpForm").attr("action",$(this).attr("del_uri")).submit();
+				return false;
+			});
 		</script>
 
 		<!-- Graphs -->
