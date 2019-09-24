@@ -1,0 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+.errorImg{
+    padding-top: 100px;
+    padding-bottom: 40px;
+}

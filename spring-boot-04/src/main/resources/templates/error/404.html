@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link th:href="@{/asserts/css/404.css}" rel="stylesheet" type="text/css" />
+    <title>错误页面404</title>
+</head>
+<body>
+    <div align="center">
+        <img class="errorImg" th:src="@{/asserts/img/404.png}">
+    </div>
+    <br>
+    <div align="center">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <h1>status:[[${status}]]</h1>
+            <h2>timestamp:[[${timestamp}]]</h2>
+        </main>
+    </div>
+</body>
+</html>
