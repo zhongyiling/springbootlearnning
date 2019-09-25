@@ -4,6 +4,7 @@ import com.zyl.springboot04.dao.DepartmentDao;
 import com.zyl.springboot04.dao.EmployeeDao;
 import com.zyl.springboot04.entities.Department;
 import com.zyl.springboot04.entities.Employee;
+import com.zyl.springboot04.exception.UserNotExistException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -72,6 +73,14 @@ public class EmployeeController {
     public String deleteEmployee(@PathVariable("id") Integer id){
         employeeDao.delete(id);
         return "redirect:/emps";
+    }
+
+    @GetMapping("/user")
+    public String queryEmployee(@RequestParam("user") String user) {
+        if(user.equals("aaa")){
+            throw new UserNotExistException();
+        }
+        return "Hello World";
     }
 
     @GetMapping("/cancel")

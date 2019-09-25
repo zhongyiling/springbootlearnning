@@ -22,6 +22,7 @@
 	<p style="color: red" th:text="${errMsg}" th:if="${not #strings.isEmpty(errMsg)}"></p>
 	<label class="sr-only" th:text="#{login.username}">Username</label>
 	<input type="text" class="form-control" th:name="username" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
+	<br>
 	<label class="sr-only" th:text="#{login.password}">Password</label>
 	<input type="password" class="form-control" th:name="password"  placeholder="Password" th:placeholder="#{login.password}" required="">
 	<div class="checkbox mb-3">
