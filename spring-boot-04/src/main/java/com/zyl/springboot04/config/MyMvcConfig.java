@@ -2,6 +2,7 @@ package com.zyl.springboot04.config;
 
 import com.zyl.springboot04.component.LoginHandlerInterceptor;
 import com.zyl.springboot04.component.MyLocalResolver;
+import org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.config.annotation.*;
 @ComponentScan("com.zyl.springboot04.*")
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         // super.addViewControllers(registry);
