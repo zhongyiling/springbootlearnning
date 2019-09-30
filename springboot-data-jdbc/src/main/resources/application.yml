@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    data-username: root
+    data-password: "Zyl2019"
+    url: jdbc:mysql://192.168.163.1:3306/jdbc?serverTimezone=Asia/Shanghai&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8081
